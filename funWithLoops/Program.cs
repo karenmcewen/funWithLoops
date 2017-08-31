@@ -101,12 +101,12 @@ namespace funWithLoops
             //create an array called days with the elements monday tuesday etc...
             //use a FOR loop to print the elememts to the console
 
-            string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-            for (int i = 0; i<days.Length;i++)
-            {
+            //string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            //for (int i = 0; i<days.Length;i++)
+            //{
             //    Console.WriteLine(days[i]);
             //}
-           
+
             ////create an int array size 25 using NEW, then put the numbers 1 to 25 into the array and print to console
 
             //int[] numbers = new int[25];
@@ -116,7 +116,7 @@ namespace funWithLoops
             //    Console.WriteLine(numbers[i]);
             //}//numbers[0]=1;...numbers[24]=25
 
-            
+
             ////start with the string 'once upon a time' and create an array called storywords using the split method 
             ////reverse the order of the elements in the array
             ////and using a for loop, print each word.
@@ -127,57 +127,145 @@ namespace funWithLoops
             //for (int i = 0; i < storyWords.Length; i++)
             //{
             //    Console.WriteLine(storyWords[i]);
-            }
-
-            //WHILE loops - only execute if the condition is TRUE and breaks when the condition becomes FALSE
-            //danger! there is the possibility of creating an infinite loop where the condition never becomes FALSE
-
-            //Console.WriteLine("Do you want to play a game (yes/no): ");
-            //string playAgain = Console.ReadLine();
-            //while (playAgain.ToLower() == "yes")
-            //{
-            //    Console.WriteLine("It's a rematch!");
-            //    Console.WriteLine("And another???");
-            //    playAgain = Console.ReadLine();
             //}
 
-            //Console.WriteLine("What is your favorite ROYGBIV color?");
-            //string userColor = Console.ReadLine();
-            ////bool isRoygbiv = false; //initial value - for BOOL type often name the variable isWhatever
-            //while(userColor != "red"  && userColor != "orange" &&  userColor != "blue" && userColor != "indigo" && userColor != "yellow" && userColor != "green" && userColor != "violet")
+            ////WHILE loops - only execute if the condition is TRUE and breaks when the condition becomes FALSE
+            ////danger! there is the possibility of creating an infinite loop where the condition never becomes FALSE
+
+            ////Console.WriteLine("Do you want to play a game (yes/no): ");
+            ////string playAgain = Console.ReadLine();
+            ////while (playAgain.ToLower() == "yes")
+            ////{
+            ////    Console.WriteLine("It's a rematch!");
+            ////    Console.WriteLine("And another???");
+            ////    playAgain = Console.ReadLine();
+            ////}
+
+            ////Console.WriteLine("What is your favorite ROYGBIV color?");
+            ////string userColor = Console.ReadLine();
+            //////bool isRoygbiv = false; //initial value - for BOOL type often name the variable isWhatever
+            ////while(userColor != "red"  && userColor != "orange" &&  userColor != "blue" && userColor != "indigo" && userColor != "yellow" && userColor != "green" && userColor != "violet")
+            ////{
+            ////    Console.WriteLine("Sorry, that is not an acceptable color. Please input color again.");
+            ////    userColor = Console.ReadLine();
+            ////}
+
+
+            //////DO WHILE loops - the body runs first before checking the condition - so it will run at least one time
+            ////string playAgain;
+            ////do
+            ////{
+            ////    Console.WriteLine("Do you want to build a snow person?(yes/no)");
+            ////    playAgain = Console.ReadLine();
+            ////    Console.WriteLine("That was fun!");
+            ////}
+            ////while (playAgain.ToLower() == "yes");
+            ////Console.WriteLine("Thanks for building with me today!");
+
+            ////BREAK - breaks out of the loop immediately - rare to use it
+            ////often used when there is an error occurring - generally if you write your code well, you won't need this
+            ////break decreases the readability of code
+            ////CONTINUE skips over an iteration - might use to keep from dividing by zero!
+            //for (int i = 0; i < 10; i++)
             //{
-            //    Console.WriteLine("Sorry, that is not an acceptable color. Please input color again.");
-            //    userColor = Console.ReadLine();
+
+            //    if (i%2 == 0)
+            //    {
+            //        continue; // this will skip the even numbers and goes to the next iteration immediately
+            //    }
+            //    Console.WriteLine(i); //if i is even, this will not print
+
+            //example counting using while
+            //int x = 1;
+            //while(x<10)
+            //{
+            //    Console.WriteLine(x);
+            //    x++;
             //}
 
+            //example very simple guessing game
+            //int lives = 2;
+            //int magicNumber = 24;
+            //bool isPlaying = true;
 
-            ////DO WHILE loops - the body runs first before checking the condition - so it will run at least one time
-            //string playAgain;
-            //do
+            //while(lives>0 && isPlaying == true)
             //{
-            //    Console.WriteLine("Do you want to build a snow person?(yes/no)");
-            //    playAgain = Console.ReadLine();
-            //    Console.WriteLine("That was fun!");
-            //}
-            //while (playAgain.ToLower() == "yes");
-            //Console.WriteLine("Thanks for building with me today!");
+            //    Console.WriteLine("Guess the magic number: ");
+            //    int userGuess = int.Parse(Console.ReadLine());
+            //    if (magicNumber == userGuess)
+            //    {
+            //        Console.WriteLine("You guessed it!");
+            //        //break; //this is one way to end the program here
+            //        isPlaying = false; //this is another way to end the program using a boolean (goes to the while loop)
 
-            //BREAK - breaks out of the loop immediately - rare to use it
-            //often used when there is an error occurring - generally if you write your code well, you won't need this
-            //break decreases the readability of code
-            //CONTINUE skips over an iteration - might use to keep from dividing by zero!
-            for (int i = 0; i < 10; i++)
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Sorry, that was not the right number. Try again!");
+            //        lives--;
+            //        Console.WriteLine("you have " + lives + " remaining");
+            //    }
+            //}
+
+            //FIZZBUZZ with a loop
+            //printout the numbers 1-100
+            //if the number is a multiple of 3 print 'fizz' instead of the number
+            //if the number is a multiple of 5 print 'buzz' instead of the number
+            //if the number is a multiple of both, print 'fizzbuzz' instead of the number
+
+
+
+            //NESTED LOOPS - inner loop is executed first, then the outer loop
+
+            //example - print out 1234 on one row and 1234 on the second row
+            //for (int i = 1; i <= 2; i++) //outer loop creates two rows
+            //{
+            //    for (int j = 1; j <= 4; j++) //inner loop prints out the numbers 1 to 4 
+            //    {
+            //        Console.Write(j);//WRITE puts everything on a single line
+            //    }
+            //    Console.WriteLine();//moves to the next line
+            //}
+
+            //TRIANGLE of stars
+            //int n = 10;
+            //for (int row = 1; row <= n; row++)
+            //{
+            //    for (int col = 1; col <= row; col++)
+            //    {
+            //        Console.Write(col +" ");
+            //    }
+            //    Console.WriteLine();
+           // }
+
+        //MULTIPLICATION TABLE - write table to 5x5 using nested loops
+        int m = 5;
+        for (int x = 1; x<=m; x++)
             {
-              
-                if (i%2 == 0)
+                for (int y=1; y<=x; y++)
                 {
-                    continue; // this will skip the even numbers and goes to the next iteration immediately
+                    Console.Write(x + " x " + y + " = " + x*y + "     ");
                 }
-                Console.WriteLine(i); //if i is even, this will not print
+                Console.WriteLine();
             }
 
+            //Create an array of your favorite movies. Print out each movie in the list, 
+            //unless the move starts with a vowel. Hint : Research .startsWith()
 
-            //---------------------------------------------------------------------------
+            string[] favMovies = { "jaws", "seven", "avatar", "star wars" };
+            foreach (string movie in favMovies)
+            {
+                if movie.StartsWith("a")|| movie.StartsWith("e")|| movie.StartsWith("i")|| movie.StartsWith("o")|| movie.StartsWith("u")
+            //i'm doing this backwards
+                        }
+
+
+            //Write a console application that asks the user for an integer. 
+            //If that integer is evenly divisible by 3, then write “You Won!” 
+            //If it isn’t, write “You Lost.” Keep asking them for a number (looping) until they win.
+
+            //-------------------------------------Here there be dragons--------------------------------------
         }
     }
 }
+
