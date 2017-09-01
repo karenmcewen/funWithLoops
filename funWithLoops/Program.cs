@@ -211,8 +211,26 @@ namespace funWithLoops
             //printout the numbers 1-100
             //if the number is a multiple of 3 print 'fizz' instead of the number
             //if the number is a multiple of 5 print 'buzz' instead of the number
-            //if the number is a multiple of both, print 'fizzbuzz' instead of the number
-
+            ////if the number is a multiple of both, print 'fizzbuzz' instead of the number
+            //for (int i = 1; i < 100; i++)
+            //{
+            //    if (i % 15 == 0)
+            //    {
+            //        Console.WriteLine("fizzbuzz");
+            //    }
+            //    else if (i % 3 == 0)
+            //    {
+            //        Console.WriteLine("fizz");
+            //    }
+            //    else if (i%5 == 0)
+            //    {
+            //        Console.WriteLine("buzz");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
 
 
             //NESTED LOOPS - inner loop is executed first, then the outer loop
@@ -238,33 +256,153 @@ namespace funWithLoops
             //    Console.WriteLine();
            // }
 
-        //MULTIPLICATION TABLE - write table to 5x5 using nested loops
-        int m = 5;
-        for (int x = 1; x<=m; x++)
-            {
-                for (int y=1; y<=x; y++)
-                {
-                    Console.Write(x + " x " + y + " = " + x*y + "     ");
-                }
-                Console.WriteLine();
-            }
+        ////MULTIPLICATION TABLE - write table to 5x5 using nested loops
+        //int m = 5;
+        //for (int x = 1; x<=m; x++)
+        //    {
+        //        for (int y=1; y<=m; y++)
+        //        {
+        //            //Console.Write(x + " x " + y + " = " + x*y + "     ");
+        //            Console.Write("{0} x {1} = {2}    ", x,y, x*y); //another way to print it out
+        //        }
+        //        Console.WriteLine();
+        //    }
 
             //Create an array of your favorite movies. Print out each movie in the list, 
             //unless the move starts with a vowel. Hint : Research .startsWith()
 
-            string[] favMovies = { "jaws", "seven", "avatar", "star wars" };
-            foreach (string movie in favMovies)
-            {
-                if movie.StartsWith("a")|| movie.StartsWith("e")|| movie.StartsWith("i")|| movie.StartsWith("o")|| movie.StartsWith("u")
-            //i'm doing this backwards
-                        }
+            //string[] favMovies = { "signs", "up", "avatar", "star wars" };
+            //foreach (string movie in favMovies)
+            //{
+            //    if (movie.StartsWith("a") || movie.StartsWith("e") || movie.StartsWith("i") || movie.StartsWith("o") || movie.StartsWith("u"))
+            //    {
+            //        //Console.WriteLine("starts with a vowel");
+            //    }
+            //    else
+            //   {
+            //        Console.WriteLine(movie);
+            //    }
+                       
+            // }
 
 
             //Write a console application that asks the user for an integer. 
             //If that integer is evenly divisible by 3, then write “You Won!” 
             //If it isn’t, write “You Lost.” Keep asking them for a number (looping) until they win.
 
-            //-------------------------------------Here there be dragons--------------------------------------
+            //int guess = 0;
+            //do
+            //{
+            //    Console.WriteLine("Please enter a number: ");
+            //    guess = int.Parse(Console.ReadLine());
+            //    if (guess % 3 != 0)
+            //    {
+            //        Console.WriteLine("You lost. Try again!");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("You won!");
+            //    }
+            //}
+            //while (guess % 3 != 0);
+            //Console.WriteLine("Game over");
+
+
+
+            ////---------------------------------------------------------------------------------------------------
+            ////Do it - PATIENT CHECK IN SYSTEM
+
+            ////Ask the user if he / she / they would like to check the patient in for his / her / their appointment
+            ////Using a While Loop, run the following sequence only if the user's answer is not YES
+            ////Print "PATIENT CHECK IN SYSTEM"
+            ////Ask the user for the client's full name
+            ////Ask the user for the client's 6-digit patient ID
+            ////Ask the user for the client's appointment time (i.e. 2:00 PM)
+            ////Ask the user if he / she / they would like to check the patient in for his / her / their appointment
+
+
+            //string answer = "no";
+            //while (answer.ToLower() == "no")
+            //{
+            //    Console.WriteLine("PATIENT CHECK IN SYSTEM");
+            //    Console.WriteLine("Would you like to use the patient check-in system?");
+            //    answer = Console.ReadLine();
+            //}
+            //Console.WriteLine("Thank you for using the Patient Check In System.");
+            //Console.WriteLine("Please enter the client's full name:");
+            //string fullName = Console.ReadLine();
+            //Console.WriteLine("What is the 6-digit ID number?" );
+            //int idNumber = int.Parse(Console.ReadLine());
+            //Console.WriteLine("What time is the appointment?");
+            //string apptTime = Console.ReadLine();
+            //Console.WriteLine("Would you like to check this patient in?");
+            //string checkinAnswer = Console.ReadLine();
+
+
+
+
+            ////---------------------------------------------------------------------------------------------------------
+            ////            Do It - GPA CALCULATION
+
+            ////Ask the user for the class they would like to add to their GPA calculation
+            ////Ask the user for the letter grade for the class (no + or - grades)
+            ////Ask the user if they have another class they would like to add to their GPA calculation
+            ////Using a Do While Loop, repeat the code if the user says "YES"
+
+
+            //Console.WriteLine("What class would you like to add to the GPA calculation?");
+            //string studentClass = Console.ReadLine();
+            //Console.WriteLine("What is the class grade (A,B,C,D,F)?");
+            //string classGrade = Console.ReadLine();
+
+
+
+
+            //Console.WriteLine("Would you like to add another grade?");
+
+
+            ////--------------------------------------------------------------------------------------------------------
+            //Write a Program and ask the user for 2 numbers(N and M) 
+            //    1) Check to see if M is greater than N. 
+            //            If M is not larger than N have the users enter new numbers.
+            //    2) Between N and M find all the numbers that are Multiple  of 3 
+            //              and print those numbers to the console.
+            //    will use a for loop starting at N and ending at M
+
+            int number1 = 0;
+            int number2 = 0;
+
+            while (number1 >= number2)
+            {
+                Console.WriteLine("You will enter 2 numbers.  The first number needs to be smaller than the second.");
+                Console.WriteLine("Please enter the first number");
+                number1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Please enter the second number");
+                number2 = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = number1; i <= number2; i++)
+            {
+                if (i%3==0)
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
+                
+           
+            
+
+
+
+
+
+
+            ////--------------------------------------------------------------------------------------------------------
+
+
+
+            ////=================================HERE THERE BE DRAGONS=============================================
         }
     }
 }
